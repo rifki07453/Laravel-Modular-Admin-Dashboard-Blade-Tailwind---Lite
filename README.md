@@ -1,59 +1,142 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<div align="center">
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+# 🧩 Rifki Admin Dashboard (Lite)
+### Laravel Blade + Tailwind CSS Modular Admin Panel
+
+<p>
+  <img src="https://img.shields.io/badge/Laravel-Framework-red?style=for-the-badge&logo=laravel" />
+  <img src="https://img.shields.io/badge/TailwindCSS-UI-blue?style=for-the-badge&logo=tailwindcss" />
+  <img src="https://img.shields.io/badge/Version-Lite-lightgrey?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Status-Active-success?style=for-the-badge" />
 </p>
 
-## About Laravel
+<p>
+A clean, modular, and modern admin dashboard built with Laravel Blade and Tailwind CSS.  
+Designed as a lightweight starter kit for developers, students, and scalable web applications.
+</p>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+</div>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+---
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 🚀 Overview
+**Rifki Admin Dashboard (Lite)** is a minimal yet professional admin panel template featuring authentication, modular architecture, reusable components, and a clean neutral UI design.
 
-## Learning Laravel
+This Lite version is focused on:
+- Clean structure
+- Authentication flow
+- Dashboard UI foundation
+- Reusable layout components
+- Developer-friendly architecture
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+Perfect for:
+- Admin panel starter projects
+- Student portfolios
+- SaaS dashboard prototypes
+- Laravel learning with clean structure
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-## Laravel Sponsors
+## ✨ Core Features
+- 🔐 Authentication (Login & Register)
+- 📊 Admin Dashboard with KPI Cards & Charts
+- 🧱 Modular Blade Layout (Reusable Components)
+- 📂 Clean Folder Structure (Scalable)
+- 🎨 Neutral Minimal UI (Elegant & Professional)
+- 📱 Responsive Design (Tailwind CSS)
+- 🧠 Clean Architecture (Controller + Service Layer)
+- 🧩 Collapsible Sidebar (Default Expanded)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+---
 
-### Premium Partners
+## 🧱 Tech Stack
+| Technology | Description |
+|-----------|-------------|
+| Laravel (Blade) | Backend & Templating Engine |
+| Tailwind CSS | UI Styling Framework |
+| Alpine.js | Lightweight UI Interactions |
+| Chart.js | Dashboard Charts |
+| Laravel Breeze | Authentication System |
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+---
 
-## Contributing
+Controller → Service → View (Blade Components)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Key principles:
+- Thin Controllers
+- Service Layer for business logic
+- Reusable UI Components
+- Scalable folder organization
 
-## Code of Conduct
+---
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## 📁 Folder Structure (Lite)
+├── app/
+│ ├── Http/Controllers/
+│ │ └── DashboardController.php
+│ ├── Services/
+│ │ └── DashboardService.php
+│ └── Models/
+│
+├── resources/views/
+│ ├── auth/
+│ ├── layouts/
+│ ├── components/
+│ │ ├── layout/
+│ │ └── basic/
+│ └── dashboard/
+│
+├── routes/
+│ └── web.php
 
-## Security Vulnerabilities
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+---
 
-## License
+## 🔐 Authentication Flow
+- Default entry: `/login`
+- Protected routes: `/dashboard`
+- Powered by Laravel Breeze (with custom UI)
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Flow: User → Login → Dashboard (Authenticated)
+
+---
+
+## 🎨 UI & Design Philosophy
+Rikan uses a **neutral minimal design system** focused on:
+- Clean layout
+- Soft color palette
+- Professional admin UX
+- Non-distracting interface
+- Scalable component design
+
+This makes it suitable for multiple use cases including SaaS, admin systems, and internal tools.
+
+---
+
+## 📊 Dashboard Components
+The dashboard includes:
+- KPI Statistic Cards
+- Chart Analytics (Dummy Data)
+- Responsive Layout Grid
+- Clean Card Components
+- Modular Sidebar Navigation
+
+---
+
+## 🧩 Component System (Lite)
+Included basic components:
+- Layout (Sidebar & Navbar)
+- Stat Cards
+- Basic UI Elements
+
+> Advanced UI Kit (Buttons, Modals, Tables, Dropdowns) is available in the Pro version.
+
+---
+
+## ⚙️ Installation Guide
+### 1. Clone Repository
+```bash
+git clone https://github.com/rifki07453/Laravel-Modular-Admin-Dashboard-Blade-Tailwind---Lite.git
+cd Laravel-Modular-Admin-Dashboard-Blade-Tailwind---Lite
+## 🏗️ Project Architecture
+This project follows a clean and modular architecture approach:
