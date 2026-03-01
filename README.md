@@ -138,5 +138,68 @@ Included basic components:
 ```bash
 git clone https://github.com/rifki07453/Laravel-Modular-Admin-Dashboard-Blade-Tailwind---Lite.git
 cd Laravel-Modular-Admin-Dashboard-Blade-Tailwind---Lite
-## 🏗️ Project Architecture
+## Project Architecture
 This project follows a clean and modular architecture approach:
+
+### 2. Install Dependencies
+composer install
+npm install && npm run dev
+
+### 3. Environment Setup
+cp .env.example .env
+php artisan key:generate
+
+### 4.Database Setup
+php artisan migrate
+
+### 5. Clone Repository
+Run Development Server
+Access: http://127.0.0.1:8000/login
+```
+
+
+| Feature                            | Lite | Pro |
+| ---------------------------------- | ---- | --- |
+| Authentication                     | ✅    | ✅   |
+| Dashboard UI                       | ✅    | ✅   |
+| Modular Architecture               | ✅    | ✅   |
+| Full UI Kit (Button, Modal, Table) | ❌    | ✅   |
+| Dark Mode                          | ❌    | ✅   |
+| Advanced Components                | ❌    | ✅   |
+| Documentation Premium              | ❌    | ✅   |
+
+
+💎 Pro Version
+
+The Pro version will include:
+
+Full UI Kit (Button, Modal, Table, Dropdown)
+
+Dark Mode & Theme Config
+
+Advanced Charts & Analytics
+
+User Management Module
+
+Premium Documentation
+
+Extended Components System
+
+
+📜 License
+This project is released as a Lite Version for educational, development, and personal/commercial usage.
+Restrictions:
+- Reselling this template as a standalone product is prohibited
+- Redistribution without proper credit is not allowed
+
+
+👤 Author
+Rifki
+Digital Admin Template & Modular UI System
+
+
+⭐ Support
+If you find this project useful:
+Star ⭐ the repository
+Fork 🍴 for customization
+Use it as your admin panel starter kit
