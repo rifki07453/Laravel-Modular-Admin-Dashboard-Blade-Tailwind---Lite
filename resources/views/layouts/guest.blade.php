@@ -21,19 +21,19 @@
 </head>
 <body class="font-sans text-slate-900 antialiased bg-slate-100 flex items-center justify-center min-h-screen relative overflow-hidden">
     
-    <!-- Dekorasi Latar Belakang Estetik -->
+    <!-- Aesthetic Background Decoration -->
     <div class="absolute inset-0 bg-blue-500/5 -skew-y-12 transform origin-top-left -z-10"></div>
     <div class="absolute -top-32 -right-32 w-96 h-96 bg-blue-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>
 
-    <!-- Tempat Kartu Login/Register -->
+    <!-- Login/Register Card Container -->
     <div class="w-full sm:max-w-md px-8 py-10 bg-white/80 backdrop-blur-md shadow-2xl sm:rounded-3xl border border-white flex flex-col items-center">
         <!-- Logo Text -->
         <h1 class="text-3xl font-extrabold tracking-tight text-slate-900 mb-2">
             Rikan <span class="text-blue-600">Lite</span>
         </h1>
-        <p class="text-sm text-slate-500 mb-6">Masuk ke panel kontrol admin Anda.</p>
+        <p class="text-sm text-slate-500 mb-6">Log in to your admin control panel.</p>
         
-        <!-- Slot untuk Form dari halaman auth -->
+        <!-- Slot for Auth Page Form -->
         <div class="w-full">
             {{ $slot }}
         </div>
