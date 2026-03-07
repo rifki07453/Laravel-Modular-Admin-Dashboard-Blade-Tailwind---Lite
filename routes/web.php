@@ -6,8 +6,8 @@ use Illuminate\Support\Facades\Route;
 /**
  * FILE: routes/web.php
  * 
- * @description Di sinilah rute HTTP aplikasi didefinisikan.
- * Ini adalah Entry Point penghubung URL di browser dengan Controller.
+ * @description This is where HTTP routes are defined.
+ * It serves as the Entry Point connecting browser URLs with Controllers.
  */
 
 /*
@@ -15,8 +15,8 @@ use Illuminate\Support\Facades\Route;
 | Web Routes
 |--------------------------------------------------------------------------
 |
-| Rute utama aplikasi. Rute pertama '/' menavigasikan pengunjung
-| otomatis ke halaman login, menyerupai portal tersembunyi bagi admin.
+| Main application routes. The '/' route automatically navigates visitors
+| to the login portal.
 |
 */
 
@@ -25,11 +25,11 @@ Route::get('/', function () {
 });
 
 /**
- * Route View Autentikasi Dummy
+ * Dummy Authentication View Routes
  * 
- * Pembeli template bisa membuang rute statis ini 
- * dan meng-uncomment `require __DIR__.'/auth.php';` jika mereka menginstal Laravel Breeze
- * dan melakukan migrasi DB sungguhan.
+ * Template buyers can remove these static routes
+ * and uncomment `require __DIR__.'/auth.php';` if they install Laravel Breeze
+ * and run real DB migrations.
  */
 Route::get('/login', function () {
     return view('auth.login');
@@ -43,21 +43,24 @@ Route::get('/forgot-password', function () {
     return view('auth.forgot-password');
 })->name('password.request');
 
-// Handle POST request fallback ke dashboard untuk simulasi click Login -> Masuk
+// Handle POST request fallback to dashboard for simulating Login action
 Route::post('/dashboard', [DashboardController::class, 'index'])->name('dashboard.sim');
+
+// Dummy Logout Route
+Route::post('/logout', function () {
+    // In a real breeze application, this would call Auth::logout()
+    return redirect()->route('login');
+})->name('logout');
 
 
 /**
- * Route Dashboard Utama
+ * Main Dashboard Route
  * 
- * Di kehidupan nyata, baris middleware `auth` digunakan untuk memastikan 
- * hanya user yang sudah login bisa masuk ke `/dashboard`.
- * 
- * Struktur Rute Pemula:
- * Route::get('/url', [NamaController::class, 'namaMethod']);
+ * In real life, the `auth` middleware is used to ensure
+ * only logged-in users can access `/dashboard`.
  */
 Route::get('/dashboard', [DashboardController::class, 'index'])
-    // ->middleware(['auth', 'verified']) // Bypass sementara untuk preview theme
+    // ->middleware(['auth', 'verified']) // Bypass temporarily for theme preview
     ->name('dashboard');
 
 
@@ -68,7 +71,7 @@ Route::get('/dashboard', [DashboardController::class, 'index'])
 // });
 
 /**
- * Ini adalah rute bawaan dari Laravel Breeze Auth.
- * Hapus komentar di bawah ini bila sistem login Breeze database sesungguhnya dipasang.
+ * These are the default routes from Laravel Breeze Auth.
+ * Remove comments below when the real database Breeze login system is installed.
  */
 // require __DIR__.'/auth.php';

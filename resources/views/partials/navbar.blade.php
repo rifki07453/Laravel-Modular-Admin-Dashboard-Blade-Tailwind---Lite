@@ -75,10 +75,10 @@
                 
                 <div class="border-t border-slate-100 p-1.5">
                     <!-- Form Button for Logout -->
-                    <form method="POST" action="#">
+                    <form method="POST" action="{{ route('logout') }}">
                         @csrf
-                        <a href="{{ route('login') }}" onclick="event.preventDefault(); this.closest('form').submit();" class="block w-full text-left px-3 py-2 text-sm font-medium text-red-600 rounded-lg hover:bg-red-50 transition-colors">
-                            Logout
+                        <a href="{{ route('logout') }}" onclick="event.preventDefault(); this.closest('form').submit();" class="block w-full text-left px-3 py-2 text-sm font-medium text-red-600 rounded-lg hover:bg-red-50 transition-colors">
+                            Log Out
                         </a>
                     </form>
                 </div>
